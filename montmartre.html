@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Paris Tour: Montmartre</title>
+  <meta name="description" content="Tour of Paris in VR">
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+<a-scene>
+  <a-assets>
+    <img id="homeThumbnail" src="static_assets/360/tour_deiffel.jpg">
+  </a-assets>
+
+  <a-entity position="0 0 0">
+    <a-camera camera>
+      <a-cursor geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+                material="color: #CCC; shader: flat;"></a-cursor>
+    </a-camera>
+  </a-entity>
+
+  <a-sound src="src: url(static_assets/music/Lucienne_Boyer.mp3)" autoplay="true" loop="true" position="0 0 0"></a-sound>
+
+  <a-link href="index.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
+          onClick="location.href='index.html'"></a-link>
+  <a-entity
+    position="0 0 -5"
+    rotation="0 0 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value: At the beginning of the twentieth century, during the Belle Époque, many artists had studios or worked in or around Montmartre, including Salvador Dalí, Amedeo Modigliani, Claude Monet, Pablo Picasso, Camille Pissarro, and Vincent van Gogh."></a-entity>
+
+  <a-entity
+    position="0 0 5"
+    rotation="0 180 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value:In 1871, Montmartre was the site of beginning of the revolutionary uprising of the Paris Commune."></a-entity>
+
+  <a-entity
+    position="-5 0 0"
+    rotation="0 90 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value: The Basilica of the Sacré Cœur was built on Montmartre from 1876 to 1919, financed by public subscription as a gesture of expiation for the suffering of the city during the Franco-Prussian War."></a-entity>
+
+  <a-sky id="sky" src="static_assets/360/montmartre-min.jpg" rotation="0 -90 0"></a-sky>
+
+</a-scene>
+</body>
+</html>

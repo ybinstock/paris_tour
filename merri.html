@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Paris Tour: Saint Merri</title>
+  <meta name="description" content="Tour of Paris in VR">
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+<a-scene>
+  <a-assets>
+    <img id="homeThumbnail" src="static_assets/360/saint_michel_fountain.jpg">
+  </a-assets>
+
+  <a-entity position="0 0 0">
+    <a-camera camera>
+      <a-cursor geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+                material="color: #CCC; shader: flat;"></a-cursor>
+    </a-camera>
+  </a-entity>
+
+  <a-sound src="src: url(static_assets/music/Jane_Birkin.mp3)" autoplay="true" loop="true" position="0 0 0"></a-sound>
+
+  <a-link href="michel.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
+          onClick="location.href='michel.html'"></a-link>
+
+  <a-entity
+    position="0 0 -5"
+    rotation="0 0 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value:The Church of Saint-Merri is a parish church in Paris, located along the busy street Rue Saint Martin."></a-entity>
+
+  <a-entity
+    position="0 0 5"
+    rotation="0 180 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value:It is dedicated to the 8th-century abbot of Autun Abbey, Medericus, who came to Paris on pilgrimage and later died there in the year 700."></a-entity>
+
+  <a-entity
+    position="-5 0 0"
+    rotation="0 90 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value: The present church was built between 1500 and 1550 in the Gothic style of architecture."></a-entity>
+
+  <a-sky id="sky" src="static_assets/360/saint-merri.jpg" rotation="0 -90 0"></a-sky>
+
+</a-scene>
+</body>
+</html>

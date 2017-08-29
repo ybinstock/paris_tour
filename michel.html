@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Paris Tour: Saint Michel Fountain</title>
+  <meta name="description" content="Tour of Paris in VR">
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+<a-scene>
+  <a-assets>
+    <img id="homeThumbnail" src="static_assets/360/montmartre-min.jpg">
+  </a-assets>
+
+  <a-entity position="0 0 0">
+    <a-camera camera>
+      <a-cursor geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+                material="color: #CCC; shader: flat;"></a-cursor>
+    </a-camera>
+  </a-entity>
+
+  <a-sound src="src: url(static_assets/music/La_Java_Bleu.mp3)" autoplay="true" loop="true" position="0 0 0"></a-sound>
+
+  <a-link href="montmartre.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
+          onClick="location.href='montmartre.html'"></a-link>
+
+  <a-entity
+    position="0 0 -5"
+    rotation="0 0 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value: Saint Michel Fountain was constructed in 1858–1860 during the French Second Empire by the architect Gabriel Davioud."></a-entity>
+
+  <a-entity
+    position="0 0 5"
+    rotation="0 180 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value:The fountain, along with other symbols of Louis Napoleon, was apparently attacked and damaged by mobs during the 1871 uprising and suppression of the Paris Commune."></a-entity>
+
+  <a-entity
+    position="-5 0 0"
+    rotation="0 90 0"
+    geometry="primitive: plane; width: 4; height: auto"
+    material="color: rgb(96, 143, 219); opacity: .5"
+    text="align: center; font: kelsonsans;
+    value: Four statues represent the cardinal virtues the Statue of Prudence, the Statue of Power, the Statue of Justice, the Statue of Temperance, and the Statues of Power and Moderation."></a-entity>
+
+  <a-sky id="sky" src="static_assets/360/saint_michel_fountain.jpg" rotation="0 -90 0"></a-sky>
+
+</a-scene>
+</body>
+</html>
