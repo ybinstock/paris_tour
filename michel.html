@@ -22,8 +22,11 @@
 
   <a-sound src="src: url(static_assets/music/La_Java_Bleu.mp3)" autoplay="true" loop="true" position="0 0 0"></a-sound>
 
-  <a-link href="montmartre.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
-          onClick="location.href='montmartre.html'"></a-link>
+  <a-entity material="visible: false;" visible="false" class="link">
+    <a-link visibile="false" href="montmartre.html" title="Next" image="#homeThumbnail" position="5 1 0"
+            rotation="0 90 0"
+            onClick="location.href='montmartre.html'"></a-link>
+  </a-entity>
 
   <a-entity
     position="0 0 -5"

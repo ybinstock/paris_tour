@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Paris Tour: Eiffel Tower</title>
-  <meta name="description" content="Tour of Paris in VR">
+  <meta name="description" content="Tour of Paris in WebVR">
   <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="app.js"></script>
@@ -23,15 +23,18 @@
 
   <a-sound src="src: url(static_assets/music/rose.mp3)" autoplay="true" loop="true" position="0 0 0"></a-sound>
 
-  <a-link href="pompidou.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
-          onClick="location.href='pompidou.html'"></a-link>
+  <a-entity material="visible: false;" visible="false" class="link">
+    <a-link href="pompidou.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
+            onClick="location.href='pompidou.html'"></a-link>
+  </a-entity>
+
 
   <a-entity class="instructions"
-    position="0 4 -5"
-    rotation="0 0 0"
-    geometry="primitive: plane; width: 4; height: 2"
-    material="color: rgb(96, 143, 219); opacity: .5"
-    text="align: center; font: kelsonsans; height: 3; line-height: 55;
+            position="0 4 -5"
+            rotation="0 0 0"
+            geometry="primitive: plane; width: 4; height: 2"
+            material="color: rgb(96, 143, 219); opacity: .5"
+            text="align: center; font: kelsonsans; height: 3; line-height: 55;
     value: Welcome to Paris. Look around with your phone or drag your mouse to learn more about the location. Click on the portal to go to the next location."></a-entity>
 
 

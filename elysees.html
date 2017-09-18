@@ -22,8 +22,10 @@
 
   <a-sound src="src: url(static_assets/music/Joe_Dassin.mp3)" autoplay="true" loop="true" position="0 0 0"></a-sound>
 
-  <a-link href="concorde.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
-          onClick="location.href='concorde.html'"></a-link>
+  <a-entity material="visible: false;" visible="false" class="link">
+    <a-link visibile="false" href="concorde.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
+            onClick="location.href='concorde.html'"></a-link>
+  </a-entity>
 
   <a-entity
     position="0 0 -5"

@@ -19,11 +19,14 @@
                 material="color: #CCC; shader: flat;"></a-cursor>
     </a-camera>
   </a-entity>
+  <a-sound src="src: url(static_assets/music/Lucienne_Boyer.mp3)" autoplay="true" loop="true"
+           position="0 0 0"></a-sound>
 
-  <a-sound src="src: url(static_assets/music/Lucienne_Boyer.mp3)" autoplay="true" loop="true" position="0 0 0"></a-sound>
+  <a-entity material="visible: false;" visible="false" class="link">
+    <a-link visibile="false" href="index.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
+            onClick="location.href='index.html'"></a-link>
+  </a-entity>
 
-  <a-link href="index.html" title="Next" image="#homeThumbnail" position="5 1 0" rotation="0 90 0"
-          onClick="location.href='index.html'"></a-link>
   <a-entity
     position="0 0 -5"
     rotation="0 0 0"
